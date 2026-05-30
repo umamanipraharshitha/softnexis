@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container about-layout">
+        <aside class="profile-card">
+          <div class="avatar" aria-hidden="true"></div>
+          <h2>Praharshitha</h2>
+          <p class="role">Frontend Developer Intern</p>
+          <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Responsive UI</span>
+          </div>
+        </aside>
+
+        <article class="about-content">
+          <h2>About me</h2>
+          <p>
+            I'm a frontend developer focused on building practical, good-looking websites
+            and dashboards. I enjoy turning ideas into clean interfaces that work well on
+            every device.
+          </p>
+          <p>
+            My recent work includes admin panels, fintech dashboards, e-commerce UIs, and
+            portfolio projects — always with attention to structure, readability, and
+            responsive design.
+          </p>
+          <p>
+            I'm currently improving my skills through hands-on projects and AI-assisted
+            development workflows, with a strong interest in UI/UX and modern web standards.
+          </p>
+          <a href="contact.html" class="btn">Let's connect</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 MyPortfolio · <a href="contact.html">Contact me</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MyPortfolio</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="hero-badge">Frontend Developer</span>
+        <h1>Hi, I'm Praharshitha</h1>
+        <p>I build clean, responsive web experiences with modern HTML, CSS, and JavaScript.</p>
+        <div class="btn-group">
+          <a href="about.html" class="btn">View my work</a>
+          <a href="contact.html" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What I do</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="card-icon">◆</div>
+            <h3>Web Design</h3>
+            <p>Simple layouts with focus on usability, spacing, and a polished look.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">◇</div>
+            <h3>Responsive UI</h3>
+            <p>Mobile-first pages that adapt smoothly from phone to desktop screens.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">○</div>
+            <h3>Frontend Projects</h3>
+            <p>Dashboards, landing pages, and portfolio sites built for real use cases.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 MyPortfolio · <a href="contact.html">Contact me</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+  </script>
+</body>
+</html>
