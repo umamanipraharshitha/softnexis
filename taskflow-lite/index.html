@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow Lite</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/utilities.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>TaskFlow Lite</h1>
+      <p>Your client-side task management solution</p>
+    </header>
+
+    <main class="panel">
+      <form id="task-form" class="task-form" novalidate>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="What needs to be done?"
+            maxlength="120"
+            autocomplete="off"
+            aria-describedby="char-count error-box"
+          />
+          <span id="char-count" class="char-count">0/120</span>
+        </div>
+        <button type="submit" class="btn-add">Add Task</button>
+      </form>
+
+      <p id="error-box" class="error-box" hidden aria-live="polite"></p>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="active">Active</button>
+          <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div id="stats-bar" class="stats" aria-live="polite"></div>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-label="Task list"></ul>
+    </main>
+
+    <footer class="app-footer">
+      <p>Data saved in your browser via localStorage</p>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
